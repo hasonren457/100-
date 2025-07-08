@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main()
+{
+	int a;
+	long long int division[51] = { 0 };
+	scanf("%d", &a);
+	for (int i = 0;i < a;i++)
+	{
+		scanf("%d", &division[i]);
+	}
+	long int mini = division[0];
+	long int maxi = division[0];
+	if (a!=1)
+	{
+		for (int jj = 0;jj < a;jj++)
+		{
+			if (division[jj] >= maxi)
+			{
+				maxi = division[jj];
+			}
+		}
+		for (int abc = 0;abc < a;abc++)
+		{
+			if (division[abc] < mini)
+			{
+				mini = division[abc];
+			}
+		}
+		printf("%lld", maxi * mini);
+		
+	}
+	else
+	{
+		int bcd = (a-1) / 2;
+		printf("%lld",division[bcd]*division[bcd]);
+	
+	}
+
+}
+
